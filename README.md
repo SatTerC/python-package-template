@@ -5,30 +5,19 @@ A cookiecutter template for creating modern Python packages with:
 - [`just`](https://just.systems/) - Command runner
 - [`ruff`](https://docs.astral.sh/ruff/) - Linting and formatting
 - [`pyright`](https://github.com/microsoft/pyright) - Static type checking
-- [`pytest`](https://pytest.org/) with [`hypothesis`](https://hypothesis.readthedocs.io/) - Testing
+- [`pytest`](https://pytest.org/) - Testing
 - [`zensical`](https://zensical.org/) - Documentation (MkDocs-based)
+
+## Requirements
+
+- [uv](https://docs.astral.sh/uv/)
 
 ## Usage
 
-Install cookiecutter if you haven't already:
-
 ```bash
-pip install cookiecutter
+uvx cookiecutter gh:SatTerC/python-package-template
 ```
 
-Generate a new package:
-
-```bash
-cookiecutter gh:SatTerC/python-package-template
-```
-
-Or clone and run locally:
-
-```bash
-git clone https://github.com/SatTerC/python-package-template.git
-cd python-package-template
-cookiecutter .
-```
 
 ## Resulting Structure
 

@@ -12,7 +12,6 @@ authors = [
 ]
 requires-python = ">={{cookiecutter.python_version}}"
 dependencies = [
-    "numpy>=2.4.2",
 ]
 
 [dependency-groups]
@@ -27,12 +26,10 @@ dev = [
 docs = [
     "mkdocstrings-python>=2.0.3",
     "zensical>=0.0.24",
-    "matplotlib>=3.5",
 ]
 test = [
     "pytest>=9.0.2",
     "pytest-cov>=6.0",
-    "hypothesis>=6.0",
 ]
 
 [tool.ruff]
@@ -42,7 +39,6 @@ target-version = "py313"
 
 [tool.ruff.lint]
 select = [
-    "NPY", # numpy-specific rules (deprecated API etc.)
     "D",   # pydocstyle
 ]
 
@@ -52,4 +48,4 @@ select = [
 "scripts/**" = ["D"]
 
 [tool.ruff.lint.pydocstyle]
-convention = "google"
+convention = "numpy"
