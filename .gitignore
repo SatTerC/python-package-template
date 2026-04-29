@@ -9,8 +9,7 @@ build/
 .venv/
 
 # Cookiecutter test output
-/tmp/my-*/
-/tmp/test*/
+/tmp/
 
 # IDE
 .vscode/

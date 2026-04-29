@@ -4,7 +4,8 @@
 def main() -> str:
     """Return a greeting message.
 
-    Returns:
-        A greeting string.
+    Returns
+    -------
+    A greeting string.
     """
     return "Hello from {{cookiecutter.package_name}}!"
