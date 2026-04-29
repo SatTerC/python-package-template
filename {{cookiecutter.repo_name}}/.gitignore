@@ -1,0 +1,12 @@
+.envrc
+site/
+__pycache__/
+notes/
+.coverage
+*.pyc
+__pycache__/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/

@@ -1,0 +1,11 @@
+{
+  "_extensions": ["cookiecutter.extensions.SlugifyExtension"],
+  "project_name": "My Package",
+  "repo_name": "{{ cookiecutter.project_name|slugify }}",
+  "package_name": "{{ cookiecutter.project_name|slugify(separator='_') }}",
+  "project_description": "A Python package",
+  "author_name": "Your Name",
+  "author_email": "your.email@example.com",
+  "github_username": "yourusername",
+  "python_version": "3.13"
+}
