@@ -11,18 +11,18 @@ test *args="":
 # Generate project from template, lint, and build docs.
 validate:
   uvx cookiecutter . --no-input --overwrite-if-exists \
-    --output-dir tmp/cookiecutter-output \
-    project_name="Test Project" \
-    project_description="Test" \
-    author_name="Test Author" \
-    author_email="test@example.com" \
-    github_username="testuser" \
+    --output-dir tmp \
+    project_name="Python Package Template" \
+    project_description="A cookiecutter template for Python packages." \
+    author_name="jmarshrossney" \
+    author_email="17361029+jmarshrossney@users.noreply.github.com" \
+    github_user_or_org="SatTerC" \
     python_version="3.13"
 
   # Run just commands within the generated project
-  cd tmp/cookiecutter-output/test-project && \
+  cd tmp/python-package-template \
     uv run just lint test typecheck docs
 
 # Remove temporary cookiecutter output directory.
 clean:
-  rm -r tmp/cookiecutter-output
+  rm -r tmp/python-package-template

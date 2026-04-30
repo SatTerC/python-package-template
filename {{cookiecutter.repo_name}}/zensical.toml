@@ -3,9 +3,9 @@ site_name = "{{cookiecutter.project_name}}"
 site_description = "{{cookiecutter.project_description}}"
 site_author = "{{cookiecutter.author_name}}"
 
-site_url = "https://{{cookiecutter.github_username}}.github.io/{{cookiecutter.repo_name}}"
-repo_name = "{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}"
-repo_url = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}"
+site_url = "https://{{cookiecutter.github_user_or_org}}.github.io/{{cookiecutter.repo_name}}"
+repo_name = "{{cookiecutter.github_user_or_org}}/{{cookiecutter.repo_name}}"
+repo_url = "https://github.com/{{cookiecutter.github_user_or_org}}/{{cookiecutter.repo_name}}"
 copyright = "Copyright &copy; 2026 {{cookiecutter.author_name}}"
 
 use_directory_urls = false

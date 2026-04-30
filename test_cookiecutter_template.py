@@ -63,7 +63,7 @@ class TestBasicGeneration:
             "project_description": "A test project",
             "author_name": "Test Author",
             "author_email": "test@example.com",
-            "github_username": "testuser",
+            "github_user_or_org": "testuser",
             "python_version": "3.13",
         }
 
@@ -79,7 +79,7 @@ class TestBasicGeneration:
             "project_description": "A test project",
             "author_name": "Test Author",
             "author_email": "test@example.com",
-            "github_username": "testuser",
+            "github_user_or_org": "testuser",
             "python_version": "3.13",
         }
 
@@ -95,7 +95,7 @@ class TestBasicGeneration:
             "project_description": "A test project",
             "author_name": "Test Author",
             "author_email": "test@example.com",
-            "github_username": "testuser",
+            "github_user_or_org": "testuser",
             "python_version": "3.13",
         }
 
@@ -119,7 +119,7 @@ class TestGeneratedFiles:
             "project_description": "A really cool package",
             "author_name": "Jane Doe",
             "author_email": "jane@example.com",
-            "github_username": "janedoe",
+            "github_user_or_org": "janedoe",
             "python_version": "3.12",
         }
         return run_cookiecutter(template_dir, tmp_path, context)
@@ -210,7 +210,7 @@ class TestSpecialCharacters:
             "project_description": "Test",
             "author_name": "Author",
             "author_email": "author@example.com",
-            "github_username": "author",
+            "github_user_or_org": "author",
             "python_version": "3.13",
         }
 
@@ -226,7 +226,7 @@ class TestSpecialCharacters:
             "project_description": "Test",
             "author_name": "Author",
             "author_email": "author@example.com",
-            "github_username": "author",
+            "github_user_or_org": "author",
             "python_version": "3.13",
         }
 
@@ -275,7 +275,7 @@ class TestTemplateStructure:
         assert "repo_name" in config
         assert "package_name" in config
         assert "author_name" in config
-        assert "github_username" in config
+        assert "github_user_or_org" in config
 
     def test_slugify_in_cookiecutter_json(self, template_dir):
         """Test that repo_name and package_name use slugify correctly."""

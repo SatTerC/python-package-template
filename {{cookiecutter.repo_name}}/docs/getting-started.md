@@ -12,13 +12,13 @@ Install the package via `pip` or `uv`.
 === "pip"
 
     ``` sh
-    pip install git+https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}
+    pip install git+https://github.com/{{cookiecutter.github_user_or_org}}/{{cookiecutter.repo_name}}
     ```
 
 === "uv"
 
     ``` sh
-    uv add git+https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}
+    uv add git+https://github.com/{{cookiecutter.github_user_or_org}}/{{cookiecutter.repo_name}}
     ```
 
 ## Basic usage
