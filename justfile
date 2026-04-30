@@ -20,7 +20,7 @@ validate:
     python_version="3.13"
 
   # Run just commands within the generated project
-  cd tmp/python-package-template \
+  cd tmp/python-package-template && \
     uv run just lint test typecheck docs
 
 # Remove temporary cookiecutter output directory.
