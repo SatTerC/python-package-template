@@ -1,4 +1,4 @@
-name: Build and deploy docs
+name: docs
 
 on:
   push:
@@ -9,10 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # v8.1.0
-      - run: uv sync --group docs
+      - uses: extractions/setup-just@v4
+      - uses: astral-sh/setup-uv@v8.1.0
+      - run: uv sync --group docs --locked
       - run: uv run just docs
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: site
 

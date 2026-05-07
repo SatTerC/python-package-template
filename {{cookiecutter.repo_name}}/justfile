@@ -5,6 +5,11 @@ _:
 # Format and lint the package using ruff.
 lint:
   ruff format
+  ruff check --fix
+
+# Same as `lint`, but doesn't make any formatting changes.
+lint-check:
+  ruff format --check
   ruff check
 
 # Run the test suite.
@@ -17,7 +22,7 @@ test-cov:
 
 # Run static type checker.
 typecheck:
-  pyright src/{{cookiecutter.package_name}}
+  pyright
 
 # Build the documentation using Zensical.
 docs: 

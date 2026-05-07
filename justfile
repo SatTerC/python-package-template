@@ -17,7 +17,7 @@ validate:
     author_name="jmarshrossney" \
     author_email="17361029+jmarshrossney@users.noreply.github.com" \
     github_user_or_org="SatTerC" \
-    python_version="3.13"
+    python_version="3.12"
 
   # Run just commands within the generated project
   cd tmp/python-package-template && \

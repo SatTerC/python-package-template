@@ -175,7 +175,6 @@ class TestGeneratedFiles:
         content = justfile.read_text()
 
         assert "--cov=cool_package" in content
-        assert "pyright src/cool_package" in content
 
     def test_source_files_exist(self, generated_project):
         """Test that source files are created with correct package name."""

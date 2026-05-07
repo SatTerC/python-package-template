@@ -6,13 +6,20 @@ build-backend = "uv_build"
 name = "{{cookiecutter.package_name}}"
 version = "0.1.0"
 description = "{{cookiecutter.project_description}}"
-readme = "README.md"
 authors = [
     { name = "{{cookiecutter.author_name}}", email = "{{cookiecutter.author_email}}" }
 ]
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
 requires-python = ">={{cookiecutter.python_version}}"
 dependencies = [
 ]
+
+[project.urls]
+Homepage = "https://SatTerC.github.io/{{cookiecutter.project_name}}"
+Repository = "https://github.com/SatTerC/{{cookiecutter.project_name}}"
+Documentation = "https://SatTerC.github.io/{{cookiecutter.project_name}}"
 
 [dependency-groups]
 dev = [
@@ -28,24 +35,44 @@ docs = [
     "zensical>=0.0.24",
 ]
 test = [
+    "coverage>=7.13.5",
     "pytest>=9.0.2",
     "pytest-cov>=6.0",
 ]
 
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+include = ["src/", "tests/"]
+
 [tool.ruff]
 line-length = 88
 indent-width = 4
-target-version = "py313"
+target-version = "py{{cookiecutter.python_version}}"
 
 [tool.ruff.lint]
 select = [
+    "E",   # pycodestyle errors
     "D",   # pydocstyle
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "UP",  # pyupgrade
+    "B",   # flake8-bugbear
+    "SIM", # flake8-simplify
+    "RUF", # ruff-specific rules
+    "PT",  # flake8-pytest-style
+    "I",   # isort
 ]
 
 [tool.ruff.lint.per-file-ignores]
 # Except tests and scripts from docstring requirements
 "tests/**" = ["D"]
 "scripts/**" = ["D"]
+# Marimo notebooks use bare expressions for display output (B018),
+# contain prose that naturally exceeds 88 chars (E501),
+# include academic citations with en dashes (RUF001),
+# and may have unused variables from exploratory cells (F841).
+"examples/**" = ["B018", "E501", "F841", "RUF001"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "numpy"
